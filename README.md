@@ -75,7 +75,8 @@ This proof extends the method and checker code of the
 [s(17) formalization](https://github.com/ofitzharding/sq17-lean), which it uses
 as a library at a fixed version. Thanks to everyone involved with the
 [Squares Project](https://github.com/jlevy/squares) for their assistance,
-especially @ManassehA06.
+especially Manasseh Ahmed
+([@Queuingtheorydotcom](https://github.com/Queuingtheorydotcom)).
 
 This project was developed with substantial assistance from Claude and Codex.
 The published theorem, source files and explicit trust boundary are the basis
