@@ -73,9 +73,13 @@ a 64-core, 512 GB machine, and longer on smaller ones; it resumes if interrupted
 
 This proof extends the method and checker code of the
 [s(17) formalization](https://github.com/ofitzharding/sq17-lean), a pinned
-dependency. This project was developed with substantial assistance from Claude
-and Codex. The published theorem, source files and explicit trust boundary are
-the basis for assessing the result.
+dependency. Thanks to everyone involved with the
+[Squares Project](https://github.com/jlevy/squares) for their assistance,
+especially [@ManassehA06](https://github.com/ManassehA06).
+
+This project was developed with substantial assistance from Claude and Codex.
+The published theorem, source files and explicit trust boundary are the basis
+for assessing the result.
 
 Project sources are licensed under the [MIT License](LICENSE). Dependencies,
 including Mathlib, retain their own licenses.
