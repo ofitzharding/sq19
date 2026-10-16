@@ -33,7 +33,7 @@ as compiled native code. This follows the trust model of the
 [s(17) formalization](https://github.com/ofitzharding/sq17-lean). It is not a
 kernel-only computation claim.
 
-**Kernel replay passed.** Every module in the theorem's import closure (13,144
+**Kernel replay passed.** Every module in the theorem's import closure (13,143
 modules, Mathlib included) was replayed through Lean's kernel with the
 toolchain's `LeanChecker`: 0 failures ([summary](verification/kernel-replay.json)).
 
@@ -75,7 +75,7 @@ This proof extends the method and checker code of the
 [s(17) formalization](https://github.com/ofitzharding/sq17-lean), a pinned
 dependency. Thanks to everyone involved with the
 [Squares Project](https://github.com/jlevy/squares) for their assistance,
-especially [@ManassehA06](https://github.com/ManassehA06).
+especially @ManassehA06.
 
 This project was developed with substantial assistance from Claude and Codex.
 The published theorem, source files and explicit trust boundary are the basis

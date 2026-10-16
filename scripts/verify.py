@@ -159,7 +159,15 @@ print(f'axioms: {", ".join(x for x in axioms if "native_decide" not in x)} + {na
 if a.kernel_replay:
     say('kernel replay of the full import closure')
     lst = B / 'closure.txt'
-    lst.write_text(run([LEAN, '--run', str(R / 'scripts/Closure.lean'), 'Sq19Lean.Assembly.Optimality'], env=ENV))
+    mods = run([LEAN, '--run', str(R / 'scripts/Closure.lean'), TARGET], env=ENV).split()
+    def olean_size(m):  # largest first, so the biggest modules do not finish last
+        top = m.split('.')[0]
+        for d in base:
+            if (d / top).is_dir() or (d / (top + '.olean')).exists():
+                f = d / (m.replace('.', '/') + '.olean')
+                return f.stat().st_size if f.exists() else 0
+        return 0
+    lst.write_text('\n'.join(sorted(mods, key=olean_size, reverse=True)) + '\n')
     rep = subprocess.run([LEAN, str(R / 'scripts/KernelReplay.lean')], cwd=R, text=True, capture_output=True,
                          env={**ENV, 'LEAN_NUM_THREADS': str(a.jobs), 'KCHECK_LIST': str(lst)})
     (B / 'kernel-replay.log').write_text(rep.stdout + rep.stderr)
