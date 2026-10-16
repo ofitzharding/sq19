@@ -72,8 +72,8 @@ a 64-core, 512 GB machine, and longer on smaller ones; it resumes if interrupted
 ## Credits
 
 This proof extends the method and checker code of the
-[s(17) formalization](https://github.com/ofitzharding/sq17-lean), a pinned
-dependency. Thanks to everyone involved with the
+[s(17) formalization](https://github.com/ofitzharding/sq17-lean), which it uses
+as a library at a fixed version. Thanks to everyone involved with the
 [Squares Project](https://github.com/jlevy/squares) for their assistance,
 especially @ManassehA06.
 
