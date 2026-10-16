@@ -18,6 +18,12 @@ certificate checks, so Lean's compiler and native evaluator are trusted
 ([axiom report](verification/Square19Optimality.log)). All 13,143 modules in the
 theorem's import closure, Mathlib included, pass a kernel replay.
 
+**Clean source rebuild passed.** On 16 October 2026 a fresh clone of this repository,
+with certificates fetched from the release, was rebuilt from source with
+`scripts/verify.py --kernel-replay` on a 64-core Linux machine in 5 h 18 min:
+`VERIFIED`, 0 kernel-replay failures ([receipt](verification/clean-build-receipt.json),
+[log](verification/clean-build.log)).
+
 ## Verify
 
 Linux x86-64 with [elan](https://github.com/leanprover/elan), Python 3.10+,
